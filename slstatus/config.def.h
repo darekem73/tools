@@ -61,17 +61,18 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function         format              argument */
-	{ ram_free,         "RAM %s",          NULL        },
-	{ swap_used,        " | swp %s",       NULL        },
-	{ disk_free,        " | / %s",         "/"         },
-	{ run_command,      " | %15s",         "gwaddress" },
-	{ run_command,      " | %12s",         "netdiag.sh" },
-	{ wifi_essid,       " | %s",            "wlp2s0"   },
-	{ wifi_perc,        " %2s",             "wlp2s0"   },
-	{ cpu_perc,         " | CPU %3s",       NULL       },
-	/* { cpu_freq,         " %7s",             NULL        }, */
-	{ battery_perc,     " | BAT %2s",       "BAT0"     },
-	{ battery_state,    " %s",              "BAT0"     },
-	{ battery_remaining," %7s",             "BAT0"     },
-	{ datetime,         " | %s",            "%F %H:%M" },
+	{ ram_free,         "RAM %s",           NULL        },
+	{ swap_used,        " | swp %s",        NULL        },
+	{ disk_free,        " | / %s",          "/"         },
+	{ run_command,      " | %15s",          "gwaddress" },
+	{ run_command,      " | %12s",          "netdiag"   },
+	{ run_command,      " | %s",            "wifidiag"  },
+	/* { wifi_essid,    " | %s",            "wlp2s0"    }, */
+	/* { wifi_perc,     " %2s",             "wlp2s0"    }, */
+	{ cpu_perc,         " | CPU %3s",       NULL        },
+	/* { cpu_freq,      " %7s",             NULL        }, */
+	{ battery_perc,     " | BAT %2s",       "BAT0"      },
+	{ battery_state,    " %s",              "BAT0"      },
+	{ battery_remaining," %7s",             "BAT0"      },
+	{ datetime,         " | %s",            "%F %H:%M"  },
 };
