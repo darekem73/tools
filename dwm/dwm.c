@@ -182,12 +182,15 @@ static void configure(Client *c);
 static void configurenotify(XEvent *e);
 static void configurerequest(XEvent *e);
 static Monitor *createmon(void);
+static void cyclelayout(const Arg *arg);
 static void destroynotify(XEvent *e);
 static void detach(Client *c);
 static void detachstack(Client *c);
 static Monitor *dirtomon(int dir);
 static void drawbar(Monitor *m);
 static void drawbars(void);
+static void enqueue(Client *c);
+static void enqueuestack(Client *c);
 static void enternotify(XEvent *e);
 static void expose(XEvent *e);
 static void focus(Client *c);
@@ -222,6 +225,7 @@ static void resizeclient(Client *c, int x, int y, int w, int h);
 static void resizemouse(const Arg *arg);
 static void resizerequest(XEvent *e);
 static void restack(Monitor *m);
+static void rotatestack(const Arg *arg);
 static void run(void);
 static void runAutostart(void);
 static void scan(void);
@@ -272,6 +276,9 @@ static int xerrorstart(Display *dpy, XErrorEvent *ee);
 static void zoom(const Arg *arg);
 static void centeredmaster(Monitor *m);
 static void centeredfloatingmaster(Monitor *m);
+static void bstack(Monitor *m);
+static void bstackhoriz(Monitor *m);
+static void deck(Monitor *m);
 
 /* variables */
 static Systray *systray =  NULL;
@@ -747,6 +754,23 @@ createmon(void)
 }
 
 void
+cyclelayout(const Arg *arg) {
+       Layout *l;
+       for(l = (Layout *)layouts; l != selmon->lt[selmon->sellt]; l++);
+       if(arg->i > 0) {
+               if(l->symbol && (l + 1)->symbol)
+                       setlayout(&((Arg) { .v = (l + 1) }));
+               else
+                       setlayout(&((Arg) { .v = layouts }));
+       } else {
+               if(l != layouts && (l - 1)->symbol)
+                       setlayout(&((Arg) { .v = (l - 1) }));
+               else
+                       setlayout(&((Arg) { .v = &layouts[LENGTH(layouts) - 2] }));
+       }
+}
+
+void
 destroynotify(XEvent *e)
 {
 	Client *c;
@@ -860,6 +884,28 @@ drawbars(void)
 
 	for (m = mons; m; m = m->next)
 		drawbar(m);
+}
+
+static void
+enqueue(Client *c)
+{
+       Client *l;
+       for (l = c->mon->clients; l && l->next; l = l->next);
+       if (l) {
+               l->next = c;
+               c->next = NULL;
+       }
+}
+
+static void
+enqueuestack(Client *c)
+{
+       Client *l;
+       for (l = c->mon->stack; l && l->snext; l = l->snext);
+       if (l) {
+               l->snext = c;
+               c->snext = NULL;
+       }
 }
 
 void
@@ -1580,6 +1626,38 @@ restack(Monitor *m)
 	}
 	XSync(dpy, False);
 	while (XCheckMaskEvent(dpy, EnterWindowMask, &ev));
+}
+
+void
+rotatestack(const Arg *arg)
+{
+       Client *c = NULL, *f;
+
+       if (!selmon->sel)
+               return;
+       f = selmon->sel;
+       if (arg->i > 0) {
+               for (c = nexttiled(selmon->clients); c && nexttiled(c->next); c = nexttiled(c->next));
+               if (c){
+                       detach(c);
+                       attach(c);
+                       detachstack(c);
+                       attachstack(c);
+               }
+       } else {
+               if ((c = nexttiled(selmon->clients))){
+                       detach(c);
+                       enqueue(c);
+                       detachstack(c);
+                       enqueuestack(c);
+               }
+       }
+       if (c){
+               arrange(selmon);
+               //unfocus(f, 1);
+               focus(f);
+               restack(selmon);
+       }
 }
 
 void
@@ -2573,7 +2651,97 @@ main(int argc, char *argv[])
 	return EXIT_SUCCESS;
 }
 
-void
+static void
+deck(Monitor *m) {
+       int dn;
+       unsigned int i, n, h, mw, my;
+       Client *c;
+
+       for(n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++);
+       if(n == 0)
+               return;
+
+       dn = n - m->nmaster;
+       if(dn > 0) /* override layout symbol */
+               snprintf(m->ltsymbol, sizeof m->ltsymbol, "D %d", dn);
+
+       if(n > m->nmaster)
+               mw = m->nmaster ? m->ww * m->mfact : 0;
+       else
+               mw = m->ww;
+       for(i = my = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), i++)
+               if(i < m->nmaster) {
+                       h = (m->wh - my) / (MIN(n, m->nmaster) - i);
+                       resize(c, m->wx, m->wy + my, mw - (2*c->bw), h - (2*c->bw), False);
+                       my += HEIGHT(c);
+               }
+               else
+                       resize(c, m->wx + mw, m->wy, m->ww - mw - (2*c->bw), m->wh - (2*c->bw), False);
+}
+
+static void
+bstack(Monitor *m) {
+       int w, h, mh, mx, tx, ty, tw;
+       unsigned int i, n;
+       Client *c;
+
+       for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++);
+       if (n == 0)
+               return;
+       if (n > m->nmaster) {
+               mh = m->nmaster ? m->mfact * m->wh : 0;
+               tw = m->ww / (n - m->nmaster);
+               ty = m->wy + mh;
+       } else {
+               mh = m->wh;
+               tw = m->ww;
+               ty = m->wy;
+       }
+       for (i = mx = 0, tx = m->wx, c = nexttiled(m->clients); c; c = nexttiled(c->next), i++) {
+               if (i < m->nmaster) {
+                       w = (m->ww - mx) / (MIN(n, m->nmaster) - i);
+                       resize(c, m->wx + mx, m->wy, w - (2 * c->bw), mh - (2 * c->bw), 0);
+                       mx += WIDTH(c);
+               } else {
+                       h = m->wh - mh;
+                       resize(c, tx, ty, tw - (2 * c->bw), h - (2 * c->bw), 0);
+                       if (tw != m->ww)
+                               tx += WIDTH(c);
+               }
+       }
+}
+
+static void
+bstackhoriz(Monitor *m) {
+       int w, mh, mx, tx, ty, th;
+       unsigned int i, n;
+       Client *c;
+
+       for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++);
+       if (n == 0)
+               return;
+       if (n > m->nmaster) {
+               mh = m->nmaster ? m->mfact * m->wh : 0;
+               th = (m->wh - mh) / (n - m->nmaster);
+               ty = m->wy + mh;
+       } else {
+               th = mh = m->wh;
+               ty = m->wy;
+       }
+       for (i = mx = 0, tx = m->wx, c = nexttiled(m->clients); c; c = nexttiled(c->next), i++) {
+               if (i < m->nmaster) {
+                       w = (m->ww - mx) / (MIN(n, m->nmaster) - i);
+                       resize(c, m->wx + mx, m->wy, w - (2 * c->bw), mh - (2 * c->bw), 0);
+                       mx += WIDTH(c);
+               } else {
+                       resize(c, tx, ty, m->ww - (2 * c->bw), th - (2 * c->bw), 0);
+                       if (th != m->wh)
+                               ty += HEIGHT(c);
+               }
+       }
+}
+
+static void
 centeredmaster(Monitor *m)
 {
 	unsigned int i, n, h, mw, mx, my, oty, ety, tw;
@@ -2628,7 +2796,7 @@ centeredmaster(Monitor *m)
 	}
 }
 
-void
+static void
 centeredfloatingmaster(Monitor *m)
 {
 	unsigned int i, n, w, mh, mw, mx, mxo, my, myo, tx;
