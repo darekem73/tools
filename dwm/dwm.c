@@ -213,6 +213,7 @@ static void maprequest(XEvent *e);
 static void monocle(Monitor *m);
 static void motionnotify(XEvent *e);
 static void movemouse(const Arg *arg);
+static void moveresize(const Arg *arg);
 static Client *nexttiled(Client *c);
 static void pop(Client *);
 static void propertynotify(XEvent *e);
