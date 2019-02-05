@@ -74,6 +74,6 @@ static const struct arg args[] = {
 	{ battery_perc,     " | BAT %2s",       "BAT0"      },
 	{ battery_state,    " %s",              "BAT0"      },
 	{ battery_remaining," %7s",             "BAT0"      },
-	{ run_command,      " | UPD %5s",       "updates"   },
+	/* { run_command,      " | UPD %5s",       "updates"   }, */
 	{ datetime,         " | %s",            "%F %H:%M"  },
 };
