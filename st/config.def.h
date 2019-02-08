@@ -85,49 +85,49 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-unsigned int alpha = 0xdd;
+unsigned int alpha = 0xaa;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+  [0] =	"black",
+  [1] =	"red3",
+  [2] =	"green3",
+  [3] =	"yellow3",
+  [4] =	"blue2",
+  [5] =	"magenta3",
+  [6] =	"cyan3",
+  [7] =	"gray90",
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+  [8] =	"gray50",
+  [9] =	"red",
+  [10]=	"green",
+  [11]=	"yellow",
+  [12]=	"#5c5cff",
+  [13]=	"magenta",
+  [14]=	"cyan",
+  [15]=	"white",
 
   /* 8 normal colors */
-  [0] = "#282a2e", /* black   */
-  [1] = "#a54242", /* red     */
-  [2] = "#8c9440", /* green   */
-  [3] = "#de935f", /* yellow  */
-  [4] = "#5f819d", /* blue    */
-  [5] = "#85678f", /* magenta */
-  [6] = "#5e8d87", /* cyan    */
-  [7] = "#707880", /* white   */
+  [16]= "#282a2e", /* black   */
+  [17]= "#a54242", /* red     */
+  [18]= "#8c9440", /* green   */
+  [19]= "#de935f", /* yellow  */
+  [20]= "#5f819d", /* blue    */
+  [21]= "#85678f", /* magenta */
+  [22]= "#5e8d87", /* cyan    */
+  [23]= "#707880", /* white   */
 
   /* 8 bright colors */
-  [8]  = "#373b41", /* black   */
-  [9]  = "#cc6666", /* red     */
-  [10] = "#b5bd68", /* green   */
-  [11] = "#f0c674", /* yellow  */
-  [12] = "#81a2be", /* blue    */
-  [13] = "#b294bb", /* magenta */
-  [14] = "#8abeb7", /* cyan    */
-  [15] = "#c5c8c6", /* white   */
+  [24]= "#373b41", /* black   */
+  [25]= "#cc6666", /* red     */
+  [26]= "#b5bd68", /* green   */
+  [27]= "#f0c674", /* yellow  */
+  [28]= "#81a2be", /* blue    */
+  [29]= "#b294bb", /* magenta */
+  [30]= "#8abeb7", /* cyan    */
+  [31]= "#c5c8c6", /* white   */
 
 	[255] = 0,
 
@@ -141,10 +141,14 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 257;
+unsigned int defaultfg = 15;
+unsigned int defaultbg = 0;
+static unsigned int defaultcs = 15;
+static unsigned int defaultrcs = 0;
+/* unsigned int defaultfg = 257;
 unsigned int defaultbg = 256;
 static unsigned int defaultcs = 257;
-static unsigned int defaultrcs = 256;
+static unsigned int defaultrcs = 256; */
 
 /*
  * Default shape of cursor
@@ -211,6 +215,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
+        { TERMMOD,              XK_Escape,      keyboard_select,{ 0 } },
 };
 
 /*
