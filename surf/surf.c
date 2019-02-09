@@ -246,7 +246,7 @@ static int showxid;
 static int cookiepolicy;
 static Display *dpy;
 static Client *clients;
-static GdkDevice *gdkkb;
+// static GdkDevice *gdkkb;
 static char *stylefile;
 static const char *useragent;
 static Parameter *curconfig;
@@ -341,7 +341,7 @@ setup(void)
 	cachedir   = buildpath(cachedir);
 	certdir    = buildpath(certdir);
 
-	gdkkb = gdk_seat_get_keyboard(gdk_display_get_default_seat(gdpy));
+	// gdkkb = gdk_seat_get_keyboard(gdk_display_get_default_seat(gdpy));
 
 	if (pipe(pipeout) < 0 || pipe(pipein) < 0) {
 		fputs("Unable to create pipes\n", stderr);
