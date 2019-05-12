@@ -12,6 +12,7 @@ static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int viewontag          = 1;     /* Switch view on tag switch */
+static const int attachtop          = 1;     /* Attach on top of stack vs on bottom */
 static const char *fonts[]          = { "monospace:size=9" };
 static const char dmenufont[]       = "monospace:size=9";
 static const char rofifont[]        = "Monospace 9";
@@ -113,8 +114,8 @@ static Key keys[] = {
         { MODKEY|ShiftMask,             XK_k,      	rotatestack,    {.i = -1 } },
 	{ MODKEY,                       XK_j,      	focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      	focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_bracketleft,   	incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_bracketright,	incnmaster,     {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_bracketleft,   	incnmaster,     {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_bracketright,	incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      	setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      	setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, 	zoom,           {0} },
