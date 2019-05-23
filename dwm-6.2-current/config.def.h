@@ -8,11 +8,11 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
-static const int showsystray        = 1;     /* 0 means no systray */
+static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int viewontag          = 1;     /* Switch view on tag switch */
-static const int attachtop          = 1;     /* Attach on top of stack vs on bottom */
+static const int viewontag          = 0;        /* Switch view on tag switch */
+static const int attachtop          = 1;        /* Attach on top of stack vs on bottom */
 static const char *fonts[]          = { "monospace:size=9" };
 static const char dmenufont[]       = "monospace:size=9";
 static const char rofifont[]        = "Monospace 9";
@@ -90,9 +90,10 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *roficmd[] = { "rofi", "-show", rofimode, "-monitor", dmenumon, "-font", rofifont, NULL };
 static const char *termcmd[]  = { "terminator", NULL };
 //static const char *termcmd[]  = { "st", NULL };
-static const char *screenlockcmd[]  = { "screenlock", NULL };
-static const char mixername[] = "alsamixer";
-static const char *mixercmd[] = { "st", "-t", mixername, "-e", mixername, NULL };
+//static const char *screenlockcmd[]  = { "screenlock", NULL };
+static const char *screenlockcmd[]  = { "blurlock", NULL };
+//static const char mixername[] = "alsamixer";
+//static const char *mixercmd[] = { "st", "-t", mixername, "-e", mixername, NULL };
 static const char *pavucmd[] = { "pavucontrol", NULL };
 static const char playername[] = "ncmpcpp";
 static const char *playercmd[] = { "st", "-t", "player", "-e", playername, NULL };
@@ -131,7 +132,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_w,      	setlayout,      {.v = &layouts[6]} },
 	{ MODKEY,                       XK_v,      	setlayout,      {.v = &layouts[10]} },
 	{ MODKEY,                       XK_g,           setlayout,      {.v = &layouts[11]} },
-	/* { MODKEY,                       XK_space,  	setlayout,      {0} }, */
+	{ MODKEY,                       XK_space,  	setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  	togglefloating, {0} },
 	{ MODKEY,                       XK_0,      	view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      	tag,            {.ui = ~0 } },
