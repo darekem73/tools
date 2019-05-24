@@ -44,6 +44,7 @@ static const Rule rules[] = {
 	{ "Thunderbird", NULL,       NULL,       1 << 7,       0,           -1 },
 	{ NULL,          NULL,       "alsamixer",0,            1,           -1 },
 	{ "Pavucontrol", NULL,       NULL,       0,            1,           -1 },
+	{ "jetbrains-pycharm-ce", NULL,       NULL,       0,            1,           -1 },
 	{ NULL,          NULL,       "player",   0,            1,           -1 },
 };
 
