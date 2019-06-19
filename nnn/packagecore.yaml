@@ -15,34 +15,34 @@ packages:
     deps:
       - ncurses
       - readline
-    container: "base/archlinux"
-  centos7.2:
-    builddeps:
-      - make
-      - gcc
-      - pkgconfig
-      - ncurses-devel
-      - readline-devel
-    deps:
-      - ncurses
-      - readline
-    commands:
-      pre:
-        - yum install epel-release
-  centos7.3:
-    builddeps:
-      - make
-      - gcc
-      - pkgconfig
-      - ncurses-devel
-      - readline-devel
-    deps:
-      - ncurses
-      - readline
-    commands:
-      pre:
-        - yum install epel-release
+    container: "archlinux/base"
   centos7.4:
+    builddeps:
+      - make
+      - gcc
+      - pkgconfig
+      - ncurses-devel
+      - readline-devel
+    deps:
+      - ncurses
+      - readline
+    commands:
+      pre:
+        - yum install epel-release
+  centos7.5:
+    builddeps:
+      - make
+      - gcc
+      - pkgconfig
+      - ncurses-devel
+      - readline-devel
+    deps:
+      - ncurses
+      - readline
+    commands:
+      pre:
+        - yum install epel-release
+  centos7.6:
     builddeps:
       - make
       - gcc
@@ -64,7 +64,7 @@ packages:
       - libreadline-dev
     deps:
       - libncursesw5
-      - libreadline-common
+      - readline-common
   fedora25:
     builddeps:
       - make
@@ -106,6 +106,16 @@ packages:
       - ncurses
       - readline
   fedora29:
+    builddeps:
+      - make
+      - gcc
+      - pkg-config
+      - ncurses-devel
+      - readline-devel
+    deps:
+      - ncurses
+      - readline
+  fedora30:
     builddeps:
       - make
       - gcc

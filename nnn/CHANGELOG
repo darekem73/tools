@@ -1,3 +1,91 @@
+nnn v2.5
+2019-05-27
+
+- mouse support
+- new location for config files - `~/.config/nnn`
+  - plugin dir location: `~/.config/nnn/plugins`
+  - selection file `.nnncp` is now `~/.config/nnn/.selection`
+- plugins:
+  - pdfview: view a PDF in pager
+  - nmount: (un)mount a storage device
+  - ndiff: file and directory diff for selection
+  - hexview: view a file in hex
+  - imgresize: batch resize images to desktop resolution
+  - ipinfo: check your IP address and whois information
+  - transfer: upload a file to transfer.in
+  - pastebin: paste the contents of a text file to paste.ubuntu.com
+  - boom: play random music from a directory
+  - nwal: set an image as wallpaper using nitrogen
+  - pywal: set selected image as wallpaper, change terminal color scheme
+  - getplugs: update plugins
+- SSHFS support
+- support `bsdtar`, simplify `patool` integration
+- native batch rename support (`vidir` dependency dropped)
+- changes to support [configuration](https://github.com/jarun/nnn/wiki/nnn-as-default-file-manager) as the default file manager
+- per-context detail/light mode
+- case-insensitive version compare
+- shortcut to visit `/` - <kbd>`</kbd> (backtick)
+- vim-like scrolloff support
+- <kbd>^D</kbd> & <kbd>^U</kbd>: scroll half page, <kbd>PgDn</kbd> & <kbd>PdUp</kbd>: scroll full page
+- fix selection across contexts
+- recognize <kbd>Home</kbd> and <kbd>End</kbd> keys at prompt for editing
+- fix broken program option `-b`
+- POSIX-compliant user-scripts (wherever possible)
+- `NNN_SCRIPT` is retired (replaced by plugins)
+
+nnn v2.4
+2019-03-19
+
+- FreeDesktop.org compliant trashing
+- mark selected entries with `+`
+- _wild_ mode (option `-w`, key <kbd>^W</kbd>) for _nav-as-you-type_
+- POSIX-compliant GUI app launcher with drop-down menu (key <kbd>=</kbd>)
+- new scripts:
+  - upload image to imgur
+  - send selection to Android using kdeconnect-cli
+- show permissions in detail mode
+- cp, mv progress bar for Linux (needs advcpmv) [BSD, macOS shows on <kbd>^T</kbd>]
+- make libreadline an optional dep (reduces memory usage)
+- minimize the number of redraws
+- handle screen resize gracefully
+- option `-d` to show hidden files (`NNN_SHOW_HIDDEN` is removed)
+- additional key <kbd>K</kbd> to toggle selection
+- change visit start dir key to <kbd>@</kbd>
+- option `-C` to disable colors removed
+- per-context initial directory replaced by program start dir
+- marker msg when spawning new shell removed
+- rename debug file to `nnndbg`
+
+nnn v2.3
+2019-02-19
+
+- file picker mode
+- repo of user-contributed scripts
+- substring search for filters (option `-s`)
+- version sort (option `-n`)
+- disk usage calculation abort with <kbd>^C</kbd>
+- create sym/hard link(s) to files in selection
+- archiving of selection
+- show dir symlinks along with dirs in top
+- fixed CJK character handling at prompts
+- key `N` (1 <= N <= 4) to switch to context N
+- bring back `NNN_OPENER` to specify file opener
+- env var `NNN_NOTE` and keybind <kbd>^N</kbd> for quick notes
+- handle multiple arguments in VISUAL/EDITOR
+- show the current directory being scanned in `du` mode
+- select all files (<kbd>Y</kbd>)
+- show command prompt (<kbd>^P</kbd>)
+- key <kbd>,</kbd> replaces <kbd>`</kbd> as alternative Leader Key
+- keybind for visit pinned directory is now <kbd>^B</kbd>
+- additional key <kbd>^V</kbd> to run or select custom script
+- use libreadline for command prompt
+- reduce delay on <kbd>Esc</kbd> press
+- config option to avoid unexpected behaviour on 0-byte file open (see #187)
+- rename config option `DISABLE_FILE_OPEN_ON_NAV` to `NNN_RESTRICT_NAV_OPEN`
+- keys removed - <kbd>$</kbd>, <kbd>^</kbd>, <kbd>Backspace</kbd>, <kbd>^H</kbd>, <kbd>^P</kbd>, <kbd>^M</kbd>, <kbd>^W</kbd>, <kbd>`</kbd>
+
+-------------------------------------------------------------------------------
+
 nnn v2.2
 2019-01-01
 
