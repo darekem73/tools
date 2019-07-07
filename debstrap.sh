@@ -21,6 +21,7 @@ cp ~/Downloads/dotConfig/_config/compton.conf ~/.config/
 sudo cp ~/Downloads/dotConfig/usr_bin/screenlock /usr/local/bin/
 sudo cp ~/Downloads/dotConfig/usr_bin/run-spectrwm /usr/local/bin/
 sudo cp ~/Downloads/dotConfig/usr_share_xsessions/* /usr/share/xsessions
+sudo cp ~/Downloads/dotConfig/usr_share_backgrounds/* /usr/share/backgrounds
 #sudo cp usr_bin/passmenu /usr/local/bin/
 #sudo cp usr_bin/emotmenu /usr/local/bin/
 #sudo cp usr_bin/utf8.csv /usr/local/bin/
