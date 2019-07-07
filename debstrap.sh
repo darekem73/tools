@@ -22,12 +22,12 @@ sudo cp ~/Downloads/dotConfig/usr_bin/screenlock /usr/local/bin/
 sudo cp ~/Downloads/dotConfig/usr_bin/run-spectrwm /usr/local/bin/
 sudo cp ~/Downloads/dotConfig/usr_share_xsessions/* /usr/share/xsessions
 sudo cp ~/Downloads/dotConfig/usr_share_backgrounds/* /usr/share/backgrounds
-#sudo cp usr_bin/passmenu /usr/local/bin/
-#sudo cp usr_bin/emotmenu /usr/local/bin/
-#sudo cp usr_bin/utf8.csv /usr/local/bin/
-#sudo cp usr_bin/statusbar.sh /usr/local/bin/
-#sudo cp usr_bin/tray /usr/local/bin/
-#sudo cp usr_bin/monitor /usr/local/bin/
+#sudo cp ~/Downloads/dotConfig/usr_bin/passmenu /usr/local/bin/
+#sudo cp ~/Downloads/dotConfig/usr_bin/emotmenu /usr/local/bin/
+#sudo cp ~/Downloads/dotConfig/usr_bin/utf8.csv /usr/local/bin/
+#sudo cp ~/Downloads/dotConfig/usr_bin/statusbar.sh /usr/local/bin/
+#sudo cp ~/Downloads/dotConfig/usr_bin/tray /usr/local/bin/
+#sudo cp ~/Downloads/dotConfig/usr_bin/monitor /usr/local/bin/
 cp ~/Downloads/dotConfig/_conkyrc-spectrwm ~/.conkyrc
 cp ~/Downloads/dotConfig/_conkyrc-stat ~/.conkyrc-stat
 cp ~/Downloads/dotConfig/_conkyrc-openbox ~/.conkyrc-openbox
@@ -38,3 +38,21 @@ cp ~/Downloads/dotConfig/_spectrwm_us.conf ~/.spectrwm_us.conf
 cp ~/Downloads/dotConfig/_bash_aliases ~/.bash_aliases
 cp ~/Downloads/dotConfig/_bashrc ~/.bashrc
 cp ~/Downloads/dotConfig/autostart.sh ~/
+
+exit
+
+cd ~/Downloads/tools/dmenu-4.9/
+make
+sudo make install
+
+cd ~/Downloads/tools/dwm-6.2/
+make
+sudo make install
+
+cd ~/Downloads/nnn
+make
+sudo make install
+
+cd ~/Downloads/tools/slstatus
+make
+sudo make install
