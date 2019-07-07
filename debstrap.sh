@@ -8,7 +8,7 @@
 # git clone https://github.com/darekem73/tools.git
 git clone https://github.com/darekem73/dotConfig.git
 git clone https://github.com/jarun/nnn
-sudo apt install make gcc xorg dwm spectrwm openbox lemonbar conky rofi terminator nitrogen compton xbacklight libreadline-dev libxinerama-dev libx11-dev libncurses5-dev libxft-dev libfreetype6-dev libx11-xcb-dev thunar nm-tray trayer firefox qutebrowser vim vifm tmux screen w3m lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+sudo apt install make gcc xorg dwm spectrwm openbox lemonbar conky rofi terminator nitrogen compton xbacklight libreadline-dev libxinerama-dev libx11-dev libncurses5-dev libxft-dev libfreetype6-dev libx11-xcb-dev thunar nm-tray trayer firefox-esr qutebrowser vim vifm tmux screen w3m lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 
 sudo mkdir -p /usr/share/backgrounds
 mkdir -p ~/.config/terminator
