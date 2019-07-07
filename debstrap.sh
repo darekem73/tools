@@ -1,4 +1,12 @@
+# su -
 # apt install sudo git
+# vi /etc/group
+# exit
+# exit
+# mkdir ~/Downloads
+# cd Downloads
+# git clone https://github.com/darekem73/tools.git
+git clone https://github.com/darekem73/dotConfig.git
 git clone https://github.com/jarun/nnn
 sudo apt install make gcc
 sudo apt install xorg
