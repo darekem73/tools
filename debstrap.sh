@@ -9,8 +9,6 @@ sudo apt install thunar nm-tray trayer
 sudo apt install firefox qutebrowser vim vifm tmux screen w3m
 sudo apt install lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 
-exit
-
 sudo mkdir -p /usr/share/backgrounds
 mkdir -p ~/.config/terminator
 mkdir -p ~/.config/openbox
@@ -25,7 +23,7 @@ sudo cp ~/Downloads/dotConfig/usr_share_backgrounds/* /usr/share/backgrounds
 #sudo cp ~/Downloads/dotConfig/usr_bin/passmenu /usr/local/bin/
 #sudo cp ~/Downloads/dotConfig/usr_bin/emotmenu /usr/local/bin/
 #sudo cp ~/Downloads/dotConfig/usr_bin/utf8.csv /usr/local/bin/
-#sudo cp ~/Downloads/dotConfig/usr_bin/statusbar.sh /usr/local/bin/
+sudo cp ~/Downloads/dotConfig/usr_bin/statusbar.sh /usr/local/bin/
 #sudo cp ~/Downloads/dotConfig/usr_bin/tray /usr/local/bin/
 #sudo cp ~/Downloads/dotConfig/usr_bin/monitor /usr/local/bin/
 cp ~/Downloads/dotConfig/_conkyrc-spectrwm ~/.conkyrc
@@ -38,8 +36,6 @@ cp ~/Downloads/dotConfig/_spectrwm_us.conf ~/.spectrwm_us.conf
 cp ~/Downloads/dotConfig/_bash_aliases ~/.bash_aliases
 cp ~/Downloads/dotConfig/_bashrc ~/.bashrc
 cp ~/Downloads/dotConfig/autostart.sh ~/
-
-exit
 
 cd ~/Downloads/tools/dmenu-4.9/
 make
@@ -54,5 +50,9 @@ make
 sudo make install
 
 cd ~/Downloads/tools/slstatus
+make
+sudo make install
+
+cd ~/Downloads/tools/st
 make
 sudo make install
