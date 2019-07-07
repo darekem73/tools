@@ -15,10 +15,12 @@ sudo mkdir -p /usr/share/backgrounds
 mkdir -p ~/.config/terminator
 mkdir -p ~/.config/openbox
 
-cp ~/Downloads/dotConfig/openbox/* ~/.config/openbox
-cp ~/Downloads/dotConfig/terminator/* ~/.config/terminator
-cp ~/Downloads/dotConfig/compton.conf ~/.config/
-sudo cp usr_bin/screenlock /usr/local/bin/
+cp ~/Downloads/dotConfig/_config/openbox/* ~/.config/openbox
+cp ~/Downloads/dotConfig/_config/terminator/* ~/.config/terminator
+cp ~/Downloads/dotConfig/_config/compton.conf ~/.config/
+sudo cp ~/Downloads/dotConfig/usr_bin/screenlock /usr/local/bin/
+sudo cp ~/Downloads/dotConfig/usr_bin/run-spectrwm /usr/local/bin/
+sudo cp ~/Downloads/dotConfig/usr_share_xsessions/* /usr/share/xsessions
 #sudo cp usr_bin/passmenu /usr/local/bin/
 #sudo cp usr_bin/emotmenu /usr/local/bin/
 #sudo cp usr_bin/utf8.csv /usr/local/bin/
