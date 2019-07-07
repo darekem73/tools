@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 /* for tilegap */
 static const unsigned int gappx     = 3;        /* gap pixel between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
