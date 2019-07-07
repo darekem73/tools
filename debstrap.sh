@@ -8,13 +8,15 @@
 # git clone https://github.com/darekem73/tools.git
 git clone https://github.com/darekem73/dotConfig.git
 git clone https://github.com/jarun/nnn
-sudo apt install make gcc xorg dwm spectrwm openbox lemonbar conky rofi terminator nitrogen compton xbacklight libreadline-dev libxinerama-dev libx11-dev libncurses5-dev libxft-dev libfreetype6-dev libx11-xcb-dev thunar nm-tray trayer firefox-esr qutebrowser vim vifm tmux screen w3m lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxappearance
+sudo apt install make gcc xorg dwm spectrwm openbox lemonbar conky rofi terminator nitrogen compton xbacklight libreadline-dev libxinerama-dev libx11-dev libncurses5-dev libxft-dev libfreetype6-dev libx11-xcb-dev thunar nm-tray trayer firefox-esr qutebrowser vim vifm tmux screen w3m lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxappearance tint2
 
 sudo mkdir -p /usr/share/backgrounds
 mkdir -p ~/.config/terminator
 mkdir -p ~/.config/openbox
+mkdir -p ~/.config/tint2
 
 cp ~/Downloads/dotConfig/_config/openbox/* ~/.config/openbox
+cp ~/Downloads/dotConfig/_config/tint2/* ~/.config/tint2
 cp ~/Downloads/dotConfig/_config/terminator/* ~/.config/terminator
 cp ~/Downloads/dotConfig/_config/compton.conf ~/.config/
 sudo cp ~/Downloads/dotConfig/usr_bin/screenlock /usr/local/bin/
@@ -30,6 +32,7 @@ sudo cp ~/Downloads/dotConfig/usr_bin/statusbar.sh /usr/local/bin/
 cp ~/Downloads/dotConfig/_conkyrc-spectrwm ~/.conkyrc
 cp ~/Downloads/dotConfig/_conkyrc-stat ~/.conkyrc-stat
 cp ~/Downloads/dotConfig/_conkyrc-openbox ~/.conkyrc-openbox
+cp ~/Downloads/dotConfig/_vimrc ~/.vimrc
 cp ~/Downloads/dotConfig/_screenrc ~/.screenrc
 cp ~/Downloads/dotConfig/_tmux.conf ~/.tmux.conf
 cp ~/Downloads/dotConfig/_spectrwm.conf ~/.spectrwm.conf
