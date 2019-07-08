@@ -6,10 +6,10 @@
 # mkdir ~/Downloads
 # cd Downloads
 # git clone https://github.com/darekem73/tools.git
-git clone https://github.com/darekem73/dotConfig.git
+git clone https://github.com/darekem73/dotConfig
 git clone https://github.com/jarun/nnn
-# apt-get install --no-install-recommends xinit xserver-xorg-video-intel xserver-xorg-input-synaptics xserver-xorg-input-kbd xserver-xorg-input-mouse xfonts-base openbox
-sudo apt install make gcc xorg dwm spectrwm openbox lemonbar conky rofi terminator nitrogen compton xbacklight libreadline-dev libxinerama-dev libx11-dev libncurses5-dev libxft-dev libfreetype6-dev libx11-xcb-dev thunar nm-tray trayer firefox-esr qutebrowser vim vifm tmux screen w3m lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxappearance tint2 mousepad
+git clone https://github.com/fanglingsu/vimb
+sudo apt install xserver-xorg make gcc dwm spectrwm openbox lemonbar conky rofi nitrogen compton xbacklight libreadline-dev libxinerama-dev libx11-dev libncurses5-dev libxft-dev libfreetype6-dev libx11-xcb-dev pcmanfm trayer vim vifm tmux screen w3m lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxappearance tint2 mousepad
 
 sudo mkdir -p /usr/share/backgrounds
 mkdir -p ~/.config/terminator
