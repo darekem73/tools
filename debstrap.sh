@@ -29,6 +29,12 @@ sudo cp ~/Downloads/dotConfig/usr_share_backgrounds/* /usr/share/backgrounds
 sudo cp ~/Downloads/dotConfig/usr_bin/statusbar.sh /usr/local/bin/
 #sudo cp ~/Downloads/dotConfig/usr_bin/tray /usr/local/bin/
 #sudo cp ~/Downloads/dotConfig/usr_bin/monitor /usr/local/bin/
+# sudo apt install flatpak mopidy ncmpcpp
+# flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+# flatpak install com.viber.Viber
+# flatpak install org.signal.Signal
+# flatpak install us.zoom.Zoom
+# flatpak install com.spotify.Client
 cp ~/Downloads/dotConfig/_conkyrc-spectrwm ~/.conkyrc
 cp ~/Downloads/dotConfig/_conkyrc-stat ~/.conkyrc-stat
 cp ~/Downloads/dotConfig/_conkyrc-openbox ~/.conkyrc-openbox
