@@ -1,5 +1,5 @@
 # su -
-# apt install sudo git
+# pacman -S sudo git
 # vi /etc/group
 # exit
 # exit
@@ -9,12 +9,12 @@
 git clone https://github.com/darekem73/dotConfig
 git clone https://github.com/jarun/nnn
 #git clone https://github.com/fanglingsu/vimb
-#sudo apt install firefox
-#sudo apt install firefox-esr
-#sudo apt install qutebrowser
-sudo apt install xserver-xorg make gcc dwm spectrwm openbox conky rofi nitrogen compton xbacklight libreadline-dev libxinerama-dev libx11-dev libncurses5-dev libxft-dev libfreetype6-dev libx11-xcb-dev pcmanfm trayer vim vifm tmux screen w3m lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxappearance tint2 mousepad ssh-askpass-fullscreen
-#sudo apt install lemonbar
-sudo apt install xmonad xmobar
+#sudo pacman -S firefox
+#sudo pacman -S firefox-esr
+#sudo pacman -S qutebrowser
+sudo pacman -S xorg make gcc spectrwm openbox conky rofi nitrogen compton pcmanfm trayer vim vifm tmux screen w3m lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxappearance tint2 mousepad 
+#sudo pacman -S lemonbar
+sudo pacman -S xmonad xmobar xmonad-contrib
 
 sudo mkdir -p /usr/share/backgrounds
 #mkdir -p ~/.config/terminator
@@ -43,7 +43,7 @@ sudo cp ~/Downloads/dotConfig/usr_share_backgrounds/* /usr/share/backgrounds
 #sudo cp ~/Downloads/dotConfig/usr_bin/statusbar.sh /usr/local/bin/
 #sudo cp ~/Downloads/dotConfig/usr_bin/tray /usr/local/bin/
 #sudo cp ~/Downloads/dotConfig/usr_bin/monitor /usr/local/bin/
-# sudo apt install flatpak mopidy ncmpcpp
+# sudo pacman -S flatpak mopidy ncmpcpp
 # flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # flatpak install com.viber.Viber
 # flatpak install org.signal.Signal
