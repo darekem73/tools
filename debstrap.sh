@@ -8,17 +8,20 @@
 # git clone https://github.com/darekem73/tools.git
 git clone https://github.com/darekem73/dotConfig
 git clone https://github.com/jarun/nnn
-git clone https://github.com/fanglingsu/vimb
+#git clone https://github.com/fanglingsu/vimb
+#sudo apt install firefox
+#sudo apt install firefox-esr
+#sudo apt install qutebrowser
 sudo apt install xserver-xorg make gcc dwm spectrwm openbox lemonbar conky rofi nitrogen compton xbacklight libreadline-dev libxinerama-dev libx11-dev libncurses5-dev libxft-dev libfreetype6-dev libx11-xcb-dev pcmanfm trayer vim vifm tmux screen w3m lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxappearance tint2 mousepad
 
 sudo mkdir -p /usr/share/backgrounds
-mkdir -p ~/.config/terminator
+#mkdir -p ~/.config/terminator
 mkdir -p ~/.config/openbox
 mkdir -p ~/.config/tint2
 
 cp ~/Downloads/dotConfig/_config/openbox/* ~/.config/openbox
 cp ~/Downloads/dotConfig/_config/tint2/* ~/.config/tint2
-cp ~/Downloads/dotConfig/_config/terminator/* ~/.config/terminator
+#cp ~/Downloads/dotConfig/_config/terminator/* ~/.config/terminator
 cp ~/Downloads/dotConfig/_config/compton.conf ~/.config/
 sudo cp ~/Downloads/dotConfig/usr_bin/screenlock /usr/local/bin/
 sudo cp ~/Downloads/dotConfig/usr_bin/run-spectrwm /usr/local/bin/
