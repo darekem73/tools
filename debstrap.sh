@@ -12,7 +12,7 @@ git clone https://github.com/jarun/nnn
 #sudo apt install firefox
 #sudo apt install firefox-esr
 #sudo apt install qutebrowser
-sudo apt install xserver-xorg make gcc dwm spectrwm openbox lemonbar conky rofi nitrogen compton xbacklight libreadline-dev libxinerama-dev libx11-dev libncurses5-dev libxft-dev libfreetype6-dev libx11-xcb-dev pcmanfm trayer vim vifm tmux screen w3m lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxappearance tint2 mousepad
+sudo apt install xserver-xorg make gcc dwm spectrwm openbox lemonbar conky rofi nitrogen compton xbacklight libreadline-dev libxinerama-dev libx11-dev libncurses5-dev libxft-dev libfreetype6-dev libx11-xcb-dev pcmanfm trayer vim vifm tmux screen w3m lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxappearance tint2 mousepad ssh-askpass-fullscreen
 sudo apt install xmonad xmobar
 
 sudo mkdir -p /usr/share/backgrounds
@@ -32,6 +32,7 @@ sudo cp ~/Downloads/dotConfig/usr_bin/netdiag /usr/local/bin/
 sudo cp ~/Downloads/dotConfig/usr_bin/gwaddress /usr/local/bin/
 sudo cp ~/Downloads/dotConfig/usr_bin/netdiag.sh /usr/local/bin/
 sudo cp ~/Downloads/dotConfig/usr_bin/wifidiag /usr/local/bin/
+sudo cp ~/Downloads/dotConfig/etc/sudo.conf /etc/
 
 sudo cp ~/Downloads/dotConfig/usr_share_xsessions/* /usr/share/xsessions
 sudo cp ~/Downloads/dotConfig/usr_share_backgrounds/* /usr/share/backgrounds
