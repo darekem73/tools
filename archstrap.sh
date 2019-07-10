@@ -15,6 +15,7 @@ git clone https://github.com/jarun/nnn
 sudo pacman -S xorg make gcc spectrwm openbox conky rofi nitrogen compton pcmanfm trayer vim vifm tmux screen w3m lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxappearance tint2 mousepad 
 #sudo pacman -S lemonbar
 sudo pacman -S xmonad xmobar xmonad-contrib
+sudo systemctl enable lightdm.service
 
 sudo mkdir -p /usr/share/backgrounds
 #mkdir -p ~/.config/terminator
