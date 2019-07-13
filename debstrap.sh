@@ -29,6 +29,7 @@ cp ~/Downloads/dotConfig/_config/tint2/* ~/.config/tint2
 cp ~/Downloads/dotConfig/_config/compton.conf ~/.config/
 sudo cp ~/Downloads/dotConfig/usr_bin/screenlock /usr/local/bin/
 sudo cp ~/Downloads/dotConfig/usr_bin/run-spectrwm /usr/local/bin/
+sudo cp ~/Downloads/dotConfig/usr_bin/conky-spectrwm /usr/local/bin/
 sudo cp ~/Downloads/dotConfig/usr_bin/netdiag /usr/local/bin/
 sudo cp ~/Downloads/dotConfig/usr_bin/gwaddress /usr/local/bin/
 sudo cp ~/Downloads/dotConfig/usr_bin/netdiag.sh /usr/local/bin/
@@ -49,7 +50,7 @@ sudo cp ~/Downloads/dotConfig/usr_share_backgrounds/* /usr/share/backgrounds
 # flatpak install org.signal.Signal
 # flatpak install us.zoom.Zoom
 # flatpak install com.spotify.Client
-cp ~/Downloads/dotConfig/_conkyrc-spectrwm ~/.conkyrc
+cp ~/Downloads/dotConfig/_conkyrc-spectrwm ~/.conkyrc-spectrwm
 cp ~/Downloads/dotConfig/_conkyrc-stat ~/.conkyrc-stat
 cp ~/Downloads/dotConfig/_conkyrc-openbox ~/.conkyrc-openbox
 cp ~/Downloads/dotConfig/_vimrc ~/.vimrc
