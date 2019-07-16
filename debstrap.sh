@@ -60,6 +60,7 @@ cp ~/Downloads/dotConfig/_spectrwm.conf ~/.spectrwm.conf
 cp ~/Downloads/dotConfig/_spectrwm_us.conf ~/.spectrwm_us.conf
 cp ~/Downloads/dotConfig/_bash_aliases ~/.bash_aliases
 cp ~/Downloads/dotConfig/_bashrc ~/.bashrc
+cat ~/Downloads/dotConfig/n-to-bashrc.txt >> ~/.bashrc
 cp ~/Downloads/dotConfig/autostart.sh ~/
 
 cd ~/Downloads/tools/dmenu-4.9/
