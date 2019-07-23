@@ -1,7 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 static char *fontfallbacks[] = {
-        "mono",
+	"ubuntu mono",
+        "monospace",
 	"dejavu sans",
 	"roboto",
 	"ubuntu",
@@ -19,14 +20,14 @@ static const char *inverted_colors[] = {
 	"#c5c8c6", /* background color */
 };
 
-static const float linespacing = 1.4;
+static const float linespacing = 1.1; //1.4;
 
 /* how much screen estate is to be used at max for the content */
-static const float usablewidth = 0.75;
-static const float usableheight = 0.75;
+static const float usablewidth = 0.85; //0.75;
+static const float usableheight = 0.85; //0.75;
 
 /* height of the presentation progress bar */
-static const int progressheight = 5;
+static const int progressheight = 2; //5;
 
 static Mousekey mshortcuts[] = {
 	/* button         function        argument */
