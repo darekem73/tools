@@ -2793,6 +2793,7 @@ int trt_kbdselect(KeySym ksym, char *buf, int len) {
         set_notifmode(0, ksym);
         return MODE_KBDSELECT;
     case XK_s :
+    case XK_space :
         if ( selectsearch_mode & 1 )
             selclear();
         else
