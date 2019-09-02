@@ -100,6 +100,7 @@ static const char *screenlockcmd[]  = { "screenlock", NULL };
 //static const char *playercmd[] = { "st", "-t", "player", "-e", playername, NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+static const char *exitcmd[]  = { "dwm-exit", NULL };
 
 #include "zoomswap.c"
 static Key keys[] = {
@@ -163,7 +164,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	//{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_q,      spawn,          {.v = exitcmd } },
 	{ MODKEY,                       XK_o,      winview,        {0} },
 };
 
