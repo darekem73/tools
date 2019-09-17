@@ -1,0 +1,11 @@
+Download gaplessgrid.c and add the gapless layout to your config.h:
+
+#include "gaplessgrid.c"
+static const Layout layouts[] = {
+	/* symbol     arrange function */
+	{ "###",      gaplessgrid },
+...
+static Key keys[] = {
+	/* modifier                     key        function        argument */
+	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[0] } },
+...
