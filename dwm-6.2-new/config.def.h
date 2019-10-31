@@ -85,6 +85,9 @@ static const char *screenlockcmd[]  = { "screenlock", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 static const char *exitcmd[]  = { "dwm-exit", NULL };
+static const char *monitorcmd[]  = { "monitor-mode", NULL };
+static const char *morelightcmd[]  = { "xbacklight", "-inc", "10", NULL };
+static const char *lesslightcmd[]  = { "xbacklight", "-dec", "10", NULL };
 
 static Key keys[] = {
         /* modifier                     key             function        argument */
@@ -94,6 +97,9 @@ static Key keys[] = {
         { MODKEY,                       XK_p,           spawn,          {.v = dmenucmd } },
         { MODKEY,                       XK_grave,       togglescratch,  {.v = scratchpadcmd } },
         { MODKEY|ControlMask,           XK_l,           spawn,          {.v = screenlockcmd } },
+        { MODKEY,                       XK_m,           spawn,          {.v = monitorcmd } },
+        { MODKEY,                       XK_equal,       spawn,          {.v = morelightcmd } },
+        { MODKEY,                       XK_minus,       spawn,          {.v = lesslightcmd } },
         { MODKEY,                       XK_b,           togglebar,      {0} },
         { MODKEY|ShiftMask,             XK_j,           rotatestack,    {.i = +1 } },
         { MODKEY|ShiftMask,             XK_k,           rotatestack,    {.i = -1 } },
