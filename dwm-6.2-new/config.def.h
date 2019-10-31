@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int gappx     = 10;        /* border pixel of windows */
+static const unsigned int gappx     = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
@@ -76,9 +76,11 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char rofimode[] = "drun";
+static const char rofitheme[] = "solarized";
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *roficmd[] = { "rofi", "-show", rofimode, "-monitor", dmenumon, "-font", rofifont, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *roficmd[] = { "rofi", "-show", rofimode, "-monitor", "1", "-font", rofifont, "-theme", rofitheme, NULL };
+//static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "terminator", NULL };
 static const char *screenlockcmd[]  = { "screenlock", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
@@ -87,7 +89,7 @@ static const char *exitcmd[]  = { "dwm-exit", NULL };
 static Key keys[] = {
         /* modifier                     key             function        argument */
         { MODKEY,                       XK_d,           spawn,          {.v = dmenucmd } },
-        { MODKEY,                       XK_r,           spawn,          {.v = roficmd } },
+        { MODKEY|ShiftMask,             XK_p,           spawn,          {.v = roficmd } },
         { MODKEY|ShiftMask,             XK_Return,      spawn,          {.v = termcmd } },
         { MODKEY,                       XK_p,           spawn,          {.v = dmenucmd } },
         { MODKEY,                       XK_grave,       togglescratch,  {.v = scratchpadcmd } },
