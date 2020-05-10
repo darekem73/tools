@@ -6,6 +6,7 @@
 # mkdir ~/Downloads
 # cd Downloads
 # git clone https://github.com/darekem73/tools.git
+cd ~/Downloads
 git clone https://github.com/darekem73/dotConfig
 git clone https://github.com/jarun/nnn
 #sudo apt install libwebkit2gtk-4.0-dev
