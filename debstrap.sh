@@ -86,6 +86,6 @@ cd ~/Downloads/tools/slstatus
 make
 sudo make install
 
-cd ~/Downloads/tools/st
+cd ~/Downloads/tools/st-new
 make
 sudo make install
