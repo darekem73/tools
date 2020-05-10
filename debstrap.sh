@@ -70,11 +70,15 @@ cd ~/Downloads/tools/dmenu-4.9/
 make
 sudo make install
 
-cd ~/Downloads/tools/dwm-6.2/
+cd ~/Downloads/tools/dwm-6.2-candidate/
 make
 sudo make install
 
 cd ~/Downloads/nnn
+make
+sudo make install
+
+cd ~/Downloads/tools/slock
 make
 sudo make install
 
