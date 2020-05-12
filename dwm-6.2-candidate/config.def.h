@@ -92,6 +92,7 @@ static Key keys[] = {
         { MODKEY,                       XK_r,           spawn,          {.v = roficmd } },
         { MODKEY|ShiftMask,             XK_Return,      spawn,          {.v = termcmd } },
         { MODKEY,                       XK_p,           spawn,          {.v = dmenucmd } },
+        { MODKEY|ShiftMask,             XK_p,           spawn,          {.v = roficmd } },
         { MODKEY,                       XK_grave,       togglescratch,  {.v = scratchpadcmd } },
         { MODKEY|ControlMask,           XK_l,           spawn,          {.v = screenlockcmd } },
         { MODKEY,                       XK_equal,       spawn,          {.v = morelightcmd } },
