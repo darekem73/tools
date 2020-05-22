@@ -65,7 +65,7 @@ static const struct arg args[] = {
 	{ swap_used,        " | swp %s",        NULL        },
 	{ disk_free,        "  / %s",           "/"         },
 	{ run_command,      " | %15s",          "gwaddress" },
-	{ run_command,      " | %12s",          "netdiag.sh"},
+	{ run_command,      " | %12s",          "netdiag"},
 	{ run_command,      " | %s",            "wifidiag"  },
 	/* { wifi_essid,    " | %s",            "wlp2s0"    }, */
 	/* { wifi_perc,     " %2s",             "wlp2s0"    }, */
