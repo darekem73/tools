@@ -9,6 +9,7 @@
 cd ~/Downloads
 git clone https://github.com/darekem73/dotConfig
 git clone https://github.com/jarun/nnn
+git clone https://github.com/magicmonty/bash-git-prompt.git
 #sudo apt install libwebkit2gtk-4.0-dev
 #git clone https://github.com/fanglingsu/vimb
 #sudo apt install firefox
