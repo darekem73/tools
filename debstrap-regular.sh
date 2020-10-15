@@ -12,12 +12,14 @@ git clone https://github.com/jarun/nnn
 git clone https://github.com/magicmonty/bash-git-prompt.git
 #sudo apt install libwebkit2gtk-4.0-dev
 #git clone https://github.com/fanglingsu/vimb
+
 #sudo apt install firefox
 #sudo apt install firefox-esr
 #sudo apt install qutebrowser
-sudo apt install xserver-xorg make gcc dwm spectrwm openbox conky rofi nitrogen feh picom xbacklight libreadline-dev libxinerama-dev libx11-dev libncurses5-dev libncursesw5-dev libxft-dev libfreetype6-dev libxrandr-dev libx11-xcb-dev pcmanfm trayer vim vifm tmux screen w3m lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxappearance tint2 mousepad ssh-askpass-fullscreen
+sudo apt install xserver-xorg make gcc dwm spectrwm openbox conky rofi nitrogen feh picom xbacklight libreadline-dev libxinerama-dev libx11-dev libncurses5-dev libncursesw5-dev libxft-dev libfreetype6-dev libxrandr-dev libx11-xcb-dev pcmanfm thunar trayer vim vifm tmux screen w3m lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxappearance tint2 mousepad ssh-askpass-fullscreen
 #sudo apt install lemonbar
-sudo apt install xmonad xmobar
+#sudo apt install impressive
+sudo apt install xmonad xmobar libghc-split-dev
 
 sudo mkdir -p /usr/share/backgrounds
 #mkdir -p ~/.config/terminator
