@@ -15,10 +15,17 @@ git clone https://github.com/magicmonty/bash-git-prompt.git
 #git clone https://github.com/fanglingsu/vimb
 sudo apt install firefox
 #sudo apt install firefox-esr
+#sudo apt install libreoffice libreoffice-gtk3 libreoffice-style-elementary
 sudo apt install qutebrowser
+#sudo apt install xserver-xorg lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings 
+#sudo apt install xinit
+#sudo apt install dwm 
+#sudo apt install spectrwm lemonbar
+#sudo apt install herbstluftwm dzen2 
+#sudo apt install openbox lxappearance tint2 mousepad ssh-askpass-fullscreen
 sudo apt install make gcc conky rofi nitrogen feh picom libreadline-dev libxinerama-dev libx11-dev libncurses5-dev libncursesw5-dev libxft-dev libfreetype6-dev libxrandr-dev thunar trayer tmux w3m slick-greeter
 sudo apt install fzy fzf curlftpfs sshfs rclone xautolock xournal gromit-mpx vifm xsel newsboat sxiv zathura impressive simplescreenrecorder
-#sudo apt install lemonbar
+sudo apt install nmon meld
 sudo apt install xmonad xmobar
 sudo apt install libghc-split-dev
 
@@ -28,7 +35,9 @@ sudo mkdir -p /usr/share/backgrounds
 #mkdir -p ~/.config/tint2
 #mkdir -p ~/.xmonad
 
-#cp ~/Downloads/dotConfig/_xmonad/* ~/.xmonad
+mkdir ~/.scripts
+cp ~/Downloads/dotConfig/_scripts/* ~/.scripts
+cp ~/Downloads/dotConfig/_xmonad/* ~/.xmonad
 #cp ~/Downloads/dotConfig/_config/openbox/* ~/.config/openbox
 #cp ~/Downloads/dotConfig/_config/tint2/* ~/.config/tint2
 #cp ~/Downloads/dotConfig/_config/terminator/* ~/.config/terminator
@@ -39,8 +48,8 @@ sudo cp ~/Downloads/dotConfig/usr_bin/dwm-exit /usr/local/bin/
 #sudo cp ~/Downloads/dotConfig/usr_bin/conky-spectrwm /usr/local/bin/
 sudo cp ~/Downloads/dotConfig/usr_bin/netdiag /usr/local/bin/
 sudo cp ~/Downloads/dotConfig/usr_bin/gwaddress /usr/local/bin/
-#sudo cp ~/Downloads/dotConfig/usr_bin/netdiag.sh /usr/local/bin/
 sudo cp ~/Downloads/dotConfig/usr_bin/wifidiag /usr/local/bin/
+sudo cp ~/Downloads/dotConfig/etc/sudoers.d /etc/sudoers.d/
 #sudo cp ~/Downloads/dotConfig/etc/sudo.conf /etc/
 
 sudo cp ~/Downloads/dotConfig/usr_share_xsessions/* /usr/share/xsessions
