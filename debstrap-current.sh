@@ -11,6 +11,8 @@ git clone https://github.com/darekem73/dotConfig
 git clone https://github.com/darekem73/dotWallpapers
 git clone https://github.com/jarun/nnn
 git clone https://github.com/magicmonty/bash-git-prompt.git
+#git clone https://github.com/mbusb/multibootusb
+
 #sudo apt install libwebkit2gtk-4.0-dev
 #git clone https://github.com/fanglingsu/vimb
 sudo apt install firefox
@@ -25,9 +27,15 @@ sudo apt install qutebrowser
 #sudo apt install openbox lxappearance tint2 mousepad ssh-askpass-fullscreen
 sudo apt install make gcc conky rofi nitrogen feh picom libreadline-dev libxinerama-dev libx11-dev libncurses5-dev libncursesw5-dev libxft-dev libfreetype6-dev libxrandr-dev thunar trayer tmux w3m slick-greeter
 sudo apt install fzy fzf curlftpfs sshfs rclone xautolock xournal gromit-mpx vifm xsel newsboat sxiv zathura impressive simplescreenrecorder
-sudo apt install nmon meld
-sudo apt install xmonad xmobar
-sudo apt install libghc-split-dev
+sudo apt install nmon meld youtube-dl mpv rtorrent mtools
+sudo apt install xmonad xmobar cabal-install
+sudo apt install libghc-split-dev libasound2-dev libxpm-dev
+#cabal update
+#cabal install xmobar --flags="all_extensions"
+#lub
+#git clone git://github.com/jaor/xmobar
+#cd ~/Downloads/xmobar
+#cabal install xmobar.cabal --flags="all_extensions"
 
 sudo mkdir -p /usr/share/backgrounds
 #mkdir -p ~/.config/terminator
