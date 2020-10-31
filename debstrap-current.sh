@@ -27,7 +27,7 @@ sudo apt install qutebrowser
 #sudo apt install openbox lxappearance tint2 mousepad ssh-askpass-fullscreen
 sudo apt install make gcc conky rofi nitrogen feh picom libreadline-dev libxinerama-dev libx11-dev libncurses5-dev libncursesw5-dev libxft-dev libfreetype6-dev libxrandr-dev thunar trayer tmux w3m slick-greeter
 sudo apt install fzy fzf curlftpfs sshfs rclone xautolock xournal gromit-mpx vifm xsel newsboat sxiv zathura impressive simplescreenrecorder
-sudo apt install nmon meld youtube-dl mpv rtorrent mtools
+sudo apt install nmon meld youtube-dl mpv rtorrent mtools entr
 sudo apt install xmonad xmobar cabal-install
 sudo apt install libghc-split-dev libasound2-dev libxpm-dev
 #cabal update
@@ -117,5 +117,7 @@ sudo make install
 cd ~/Downloads/tools/st-new
 make
 sudo make install
+sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/st
+sudo update-alternatives --set x-terminal-emulator /usr/local/bin/st
 
 sudo chmod +s /bin/ping
