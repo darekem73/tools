@@ -25,11 +25,16 @@ sudo apt install qutebrowser
 #sudo apt install spectrwm lemonbar
 #sudo apt install herbstluftwm dzen2 
 #sudo apt install openbox lxappearance tint2 mousepad ssh-askpass-fullscreen
+
+#sudo apt install libgtk-3-dev
+#git clone https://github.com/mwh/dragon.git
+
 sudo apt install make gcc conky rofi nitrogen feh picom libreadline-dev libxinerama-dev libx11-dev libncurses5-dev libncursesw5-dev libxft-dev libfreetype6-dev libxrandr-dev thunar trayer tmux w3m slick-greeter
 sudo apt install fzy fzf curlftpfs sshfs rclone xautolock xournal gromit-mpx vifm xsel newsboat sxiv zathura impressive simplescreenrecorder
 sudo apt install nmon meld youtube-dl mpv rtorrent mtools entr
 sudo apt install xmonad xmobar cabal-install
 sudo apt install libghc-split-dev libasound2-dev libxpm-dev
+sudo apt install ttf-mscorefonts-installer
 #cabal update
 #cabal install xmobar --flags="all_extensions"
 #lub
