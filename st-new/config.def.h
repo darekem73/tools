@@ -7,7 +7,7 @@
  */
 
 /* static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true"; */
-static char *font = "Mono-9";
+static char *font = "LiberationMono-11";
 static int borderpx = 2;
 
 /*
