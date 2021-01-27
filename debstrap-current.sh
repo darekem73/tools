@@ -12,9 +12,14 @@ git clone https://github.com/darekem73/dotWallpapers
 git clone https://github.com/jarun/nnn
 git clone https://github.com/magicmonty/bash-git-prompt.git
 #git clone https://github.com/mbusb/multibootusb
+#droidcam
+#git clone https://github.com/umlaeute/v4l2loopback.git
+#sudo apt install libavutil-dev libturbojpeg0-dev libswscale-dev libspeex-dev
 
+#vimb
 #sudo apt install libwebkit2gtk-4.0-dev
 #git clone https://github.com/fanglingsu/vimb
+
 sudo apt install firefox
 #sudo apt install firefox-esr
 #sudo apt install libreoffice libreoffice-gtk3 libreoffice-style-elementary
@@ -26,11 +31,13 @@ sudo apt install qutebrowser
 #sudo apt install herbstluftwm dzen2 
 #sudo apt install openbox lxappearance tint2 mousepad ssh-askpass-fullscreen
 
+#drag and drop for nnn
 #sudo apt install libgtk-3-dev
 #git clone https://github.com/mwh/dragon.git
 
 sudo apt install make gcc conky rofi nitrogen feh picom libreadline-dev libxinerama-dev libx11-dev libncurses5-dev libncursesw5-dev libxft-dev libfreetype6-dev libxrandr-dev thunar trayer tmux w3m slick-greeter
 sudo apt install fzy fzf curlftpfs sshfs rclone xautolock xournal gromit-mpx vifm xsel newsboat sxiv zathura impressive simplescreenrecorder
+sudo apt install dunst lxsession
 sudo apt install nmon meld youtube-dl mpv rtorrent mtools entr
 sudo apt install xmonad xmobar cabal-install
 sudo apt install libghc-split-dev libasound2-dev libxpm-dev
@@ -38,9 +45,9 @@ sudo apt install ttf-mscorefonts-installer
 #cabal update
 #cabal install xmobar --flags="all_extensions"
 #lub
-#git clone git://github.com/jaor/xmobar
-#cd ~/Downloads/xmobar
-#cabal install xmobar.cabal --flags="all_extensions"
+	#git clone git://github.com/jaor/xmobar
+	#cd ~/Downloads/xmobar
+	#cabal install xmobar.cabal --flags="all_extensions"
 
 sudo mkdir -p /usr/share/backgrounds
 #mkdir -p ~/.config/terminator
@@ -124,5 +131,11 @@ make
 sudo make install
 sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/st
 sudo update-alternatives --set x-terminal-emulator /usr/local/bin/st
+
+#droidcam
+#cd ~/Downloads/tools/droidcam
+#make
+#sudo ./install-video
+#sudo ./install-dkms
 
 sudo chmod +s /bin/ping
