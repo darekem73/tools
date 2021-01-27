@@ -13,7 +13,7 @@ git clone https://github.com/jarun/nnn
 git clone https://github.com/magicmonty/bash-git-prompt.git
 #git clone https://github.com/mbusb/multibootusb
 #droidcam
-#git clone https://github.com/umlaeute/v4l2loopback.git
+#git clone https://github.com/dev47apps/droidcam.git
 #sudo apt install libavutil-dev libturbojpeg0-dev libswscale-dev libspeex-dev
 
 #vimb
