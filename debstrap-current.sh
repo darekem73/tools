@@ -36,7 +36,7 @@ sudo apt install qutebrowser
 #git clone https://github.com/mwh/dragon.git
 
 sudo apt install make gcc conky rofi nitrogen feh picom libreadline-dev libxinerama-dev libx11-dev libncurses5-dev libncursesw5-dev libxft-dev libfreetype6-dev libxrandr-dev thunar trayer tmux w3m slick-greeter
-sudo apt install fzy fzf curlftpfs sshfs rclone xautolock xournal gromit-mpx vifm xsel newsboat sxiv zathura impressive simplescreenrecorder
+sudo apt install fzy fzf curlftpfs sshfs archivemount rclone xautolock xournal gromit-mpx vifm xsel newsboat sxiv zathura impressive simplescreenrecorder
 sudo apt install dunst lxsession
 sudo apt install nmon meld youtube-dl mpv rtorrent mtools entr
 sudo apt install xmonad xmobar cabal-install
@@ -106,7 +106,7 @@ cp ~/Downloads/dotConfig/_bashrc ~/.bashrc
 cp ~/Downloads/dotConfig/_bash_profile ~/.bash_profile
 cp ~/Downloads/dotConfig/autostart.sh ~/
 
-cd ~/Downloads/tools/dmenu-4.9/
+cd ~/Downloads/tools/dmenu-5.0/
 make
 sudo make install
 
