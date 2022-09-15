@@ -40,7 +40,7 @@ sudo apt install fzy fzf curlftpfs sshfs archivemount rclone xautolock xournal g
 sudo apt install dunst lxsession
 sudo apt install nmon meld youtube-dl mpv rtorrent mtools entr
 sudo apt install xmonad xmobar cabal-install
-sudo apt install libghc-split-dev libasound2-dev libxpm-dev
+sudo apt install libghc-split-dev libasound2-dev libxpm-dev libghc6-xmonad-contrib-dev libghc6-xmonad-dev
 sudo apt install ttf-mscorefonts-installer
 #cabal update
 #cabal install xmobar --flags="all_extensions"
