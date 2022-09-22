@@ -9,7 +9,7 @@
 # git clone https://github.com/darekem73/tools.git
 
 sudo xbps-install make gcc perl readline-devel freetype-devel libXinerama-devel libXft-devel libX11-devel libXrandr-devel elogind dbus xorg lightdm lightdm-gtk3-greeter htop tmux alacritty nitrogen picom wget curl NetworkManager dragon pkg-config
-sudo xbps-install conky rofi fzy fzf curlftpfs fuse-sshfs archivemount rclone xautolock xournal gromit-mpx xsel sxiv zathura nmon meld rtorrent entr 
+sudo xbps-install conky rofi fzy fzf curlftpfs fuse-sshfs rclone xautolock xournal gromit-mpx xsel sxiv zathura nmon meld rtorrent entr 
 sudo xbps-install w3m openconnect timeshift pass 
 sudo xbps-install xdg-desktop-portal xdg-user-dirs xdg-utils flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
