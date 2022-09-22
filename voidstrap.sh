@@ -51,7 +51,7 @@ sudo mkdir -p /usr/share/xsessions
 sudo cp ~/Downloads/dotConfig/usr_share_xsessions/dwm.desktop /usr/share/xsessions
 #sudo cp ~/Downloads/dotWallpapers/* /usr/share/backgrounds
 sudo cp ~/Downloads/dotConfig/usr_bin/passmenu /usr/local/bin/
-#cp ~/Downloads/dotConfig/_conkyrc-stat ~/.conkyrc-stat
+cp ~/Downloads/dotConfig/_conkyrc-stat ~/.conkyrc-stat
 cp ~/Downloads/dotConfig/_vimrc ~/.vimrc
 cp ~/Downloads/dotConfig/_tmux.conf ~/.tmux.conf
 cp ~/Downloads/dotConfig/_bash_aliases ~/.bash_aliases
