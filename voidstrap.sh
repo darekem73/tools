@@ -13,6 +13,7 @@ sudo xbps-install conky rofi fzy fzf curlftpfs fuse-sshfs rclone xautolock xourn
 sudo xbps-install w3m openconnect timeshift pass 
 sudo xbps-install xdg-desktop-portal xdg-user-dirs xdg-utils flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+#sudo xbps-install qtile
 
 cd ~/Downloads
 git clone https://github.com/darekem73/dotConfig
@@ -40,6 +41,7 @@ sudo mkdir -p /usr/share/backgrounds
 mkdir ~/.scripts
 cp ~/Downloads/dotConfig/_scripts/* ~/.scripts
 cp ~/Downloads/dotConfig/_config/compton.conf ~/.config/
+#cp ~/Downloads/dotConfiq/_config/qtile/* ~/.config/qtile
 sudo cp ~/Downloads/dotConfig/usr_bin/dwm-exit /usr/local/bin/
 sudo cp ~/Downloads/dotConfig/usr_bin/netdiag /usr/local/bin/
 sudo cp ~/Downloads/dotConfig/usr_bin/gwaddress /usr/local/bin/
