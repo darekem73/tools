@@ -3,7 +3,7 @@
 # git clone https://github.com/darekem73/tools.git
 
 sudo dnf install vim git
-sudo dnf install ghc ghc-xmonad ghc-xmonad-devel ghc-xmonad-contrib ghc-xmonad-contrib-devel xmobar ghc-split
+sudo dnf install ghc xmonad ghc-xmonad ghc-xmonad-devel ghc-xmonad-contrib ghc-xmonad-contrib-devel xmobar ghc-split ghc-split-devel
 sudo dnf install redhat-rpm-config
 
 # sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
