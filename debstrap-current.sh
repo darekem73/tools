@@ -35,6 +35,12 @@ sudo apt install qutebrowser
 #sudo apt install libgtk-3-dev
 #git clone https://github.com/mwh/dragon.git
 
+sudo apt install fonts-b612
+sudo apt install fonts-hack
+sudo apt install fonts-inconsolata
+sudo apt install fonts-jetbrains-mono
+sudo apt install fonts-ubuntu
+
 sudo apt install make gcc conky rofi nitrogen feh picom libreadline-dev libxinerama-dev libx11-dev libncurses5-dev libncursesw5-dev libxft-dev libfreetype6-dev libxrandr-dev thunar trayer tmux w3m slick-greeter
 sudo apt install fzy fzf curlftpfs sshfs archivemount rclone xautolock xournal gromit-mpx vifm xsel newsboat nsxiv zathura impressive simplescreenrecorder
 sudo apt install dunst lxsession

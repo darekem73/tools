@@ -11,6 +11,8 @@ sudo dnf install redhat-rpm-config
 # sudo dnf config-manager --set-enabled rpmfusion-free-updates-testing
 # sudo dnf config-manager --set-enabled rpmfusion-nonfree-updates-testing
 
+sudo dnf install jetbrains-mono-fonts liberation-fonts levien-inconsolata-fonts polarsys-b612-fonts
+
 sudo dnf install readline-devel freetype-devel libXinerama-devel libXft-devel libX11-devel libXrandr-devel 
 sudo dnf install htop tmux alacritty nitrogen picom dunst xset
 #sudo dnf install conky rofi fzy fzf curlftpfs fuse-sshfs rclone 
@@ -39,6 +41,8 @@ cp ~/Downloads/dotConfig/_xmonad/xmoand.hs-fedora ~/.xmonad/xmonad.hs
 cp ~/Downloads/dotConfig/_xmonad/xmobarrc-fedora ~/.xmonad/xmobarrc
 #cp ~/Downloads/dotConfig/_config/compton.conf ~/.config/
 #cp ~/Downloads/dotConfiq/_config/qtile/* ~/.config/qtile
+mkdir -p ~/.config/alacritty
+cp ~/Downloads/dotConfiq/_config/alacritty/* ~/.config/alacritty
 sudo cp ~/Downloads/dotConfig/usr_bin/dwm-exit /usr/local/bin/
 sudo cp ~/Downloads/dotConfig/usr_bin/rofi-run /usr/local/bin/
 sudo cp ~/Downloads/dotConfig/usr_bin/tmux-run /usr/local/bin/

@@ -6,12 +6,17 @@ sudo zypper install vim git make
 sudo zypper install ghc xmonad ghc-xmonad ghc-xmonad-devel ghc-xmonad-contrib ghc-xmonad-contrib-devel xmobar ghc-split ghc-split-devel
 sudo dnf install redhat-rpm-config
 
+sudo zypper in jetbrains-mono-fonts
+sudo zypper in hack-fonts
+sudo zypper in noto-sans-mono-fonts
+sudo zypper in dejavu-fonts
+
 sudo zypper install readline-devel freetype-devel 
 sudo zypper install htop tmux alacritty nitrogen picom dunst 
-#sudo zypper install flatpak
-#sudo zypper install conky rofi fzy fzf curlftpfs rclone bc thunar
-#sudo zypper install gromit-mpx xsel xclip zathura nmon meld rtorrent entr 
-#sudo zypper install w3m openconnect timeshift password-store password-store-dmenu 
+sudo zypper install flatpak qutebrowser
+sudo zypper install conky rofi fzy fzf curlftpfs rclone bc thunar
+sudo zypper install gromit-mpx xsel xclip zathura nmon meld rtorrent entr 
+sudo zypper install w3m openconnect timeshift password-store password-store-dmenu 
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 cd ~/Downloads
